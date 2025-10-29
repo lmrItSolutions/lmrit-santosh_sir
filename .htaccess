@@ -1,0 +1,8 @@
+# Redirect root to /the100.co.in/ subdirectory
+RedirectMatch 301 ^/$ /the100.co.in/
+
+# Optional: Force HTTPS
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
