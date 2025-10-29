@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cric Studio - Your ultimate source for cricket, football, and tennis news and updates">
+    <title>Cric Studio - Sports News & Updates</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>🏏 Cric Studio</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#cricket" class="nav-link">Cricket</a></li>
+                    <li><a href="#football" class="nav-link">Football</a></li>
+                    <li><a href="#tennis" class="nav-link">Tennis</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#terms" class="nav-link">Terms</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Welcome to Cric Studio</h2>
+                <p class="hero-subtitle">Your Ultimate Destination for Sports News & Updates</p>
+                <p class="hero-description">Stay updated with the latest cricket, football, and tennis news from around the world</p>
+                <div class="hero-buttons">
+                    <a href="#cricket" class="btn btn-primary">Explore Cricket</a>
+                    <a href="#football" class="btn btn-secondary">Football News</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section class="section signup-section">
+        <div class="container">
+            <div class="signup-container">
+                <div class="signup-content">
+                    <h2 class="signup-title">Stay Updated with Latest Sports News</h2>
+                    <p class="signup-description">Subscribe to our newsletter and never miss out on breaking news, match updates, and exclusive content from the world of cricket, football, and tennis.</p>
+                </div>
+                <form class="signup-form" id="signupForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="userId" placeholder="User ID (Username)" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="mobile" placeholder="Mobile Number" class="form-input" pattern="[0-9]{10,15}" title="Please enter a valid mobile number (10-15 digits)" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="cricket" name="sports" value="cricket">
+                            <span>🏏 Cricket</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="football" name="sports" value="football">
+                            <span>⚽ Football</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="tennis" name="sports" value="tennis">
+                            <span>🎾 Tennis</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>Register Now</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <p class="form-note">By registering, you agree to receive updates. Unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cricket Section -->
+    <section id="cricket" class="section cricket-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🏏</span>
+                <h2 class="section-title">Cricket Updates</h2>
+                <p class="section-subtitle">Latest cricket news, scores, and highlights</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&h=500&fit=crop" alt="Cricket Match">
+                        <span class="badge">Breaking</span>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">India Wins Thrilling Series Against Australia</h3>
+                        <p class="news-excerpt">In an electrifying finish, India clinched the series 3-2 with an outstanding performance in the final test match at Melbourne Cricket Ground.</p>
+                        <div class="news-meta">
+                            <span class="date">2 hours ago</span>
+                            <span class="category">Test Cricket</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&h=400&fit=crop" alt="Cricket Stadium">
+                        <span class="badge">Live</span>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">T20 World Cup: England vs Pakistan Today</h3>
+                        <p class="news-excerpt">The much-anticipated clash between England and Pakistan is set to begin at 7:30 PM IST. Both teams looking to secure a spot in the semi-finals.</p>
+                        <div class="news-meta">
+                            <span class="date">30 mins ago</span>
+                            <span class="category">T20</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=600&h=400&fit=crop" alt="Cricket Player">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Virat Kohli Reaches 50th ODI Century</h3>
+                        <p class="news-excerpt">Cricket legend Virat Kohli adds another milestone to his illustrious career with his 50th ODI century against New Zealand.</p>
+                        <div class="news-meta">
+                            <span class="date">5 hours ago</span>
+                            <span class="category">ODI</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1512719994953-eabf50895df7?w=600&h=400&fit=crop" alt="Cricket Stadium Night">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">IPL 2025: New Teams Announced</h3>
+                        <p class="news-excerpt">IPL announces expansion with two new teams joining the league. Auctions scheduled for next month with massive player pool expected.</p>
+                        <div class="news-meta">
+                            <span class="date">1 day ago</span>
+                            <span class="category">IPL</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Football Section -->
+    <section id="football" class="section football-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">⚽</span>
+                <h2 class="section-title">Football Updates</h2>
+                <p class="section-subtitle">Latest football news, scores, and transfers</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=500&fit=crop" alt="Football Stadium">
+                        <span class="badge">Breaking</span>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Manchester City Wins Premier League Title</h3>
+                        <p class="news-excerpt">Manchester City secures their fourth consecutive Premier League title with a dominant 3-0 victory over Arsenal in the final match of the season.</p>
+                        <div class="news-meta">
+                            <span class="date">1 hour ago</span>
+                            <span class="category">Premier League</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop" alt="Football Player">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Real Madrid Signs Young Sensation</h3>
+                        <p class="news-excerpt">Real Madrid completes the signing of Brazil's rising star for a record-breaking fee. The 21-year-old midfielder signs a 6-year contract.</p>
+                        <div class="news-meta">
+                            <span class="date">3 hours ago</span>
+                            <span class="category">Transfer News</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop" alt="Football Match">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Champions League Final Preview</h3>
+                        <p class="news-excerpt">Bayern Munich vs Barcelona: A tactical breakdown of what promises to be an epic Champions League final showdown this Saturday.</p>
+                        <div class="news-meta">
+                            <span class="date">4 hours ago</span>
+                            <span class="category">Champions League</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1589487391730-58f20eb2c308?w=600&h=400&fit=crop" alt="Football Stadium Aerial">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">World Cup 2026: Stadium Updates</h3>
+                        <p class="news-excerpt">FIFA releases new images of World Cup 2026 stadiums across USA, Canada, and Mexico. Construction on track for timely completion.</p>
+                        <div class="news-meta">
+                            <span class="date">1 day ago</span>
+                            <span class="category">World Cup</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tennis Section -->
+    <section id="tennis" class="section tennis-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🎾</span>
+                <h2 class="section-title">Tennis Updates</h2>
+                <p class="section-subtitle">Latest tennis news, matches, and rankings</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&h=500&fit=crop" alt="Tennis Court">
+                        <span class="badge">Live</span>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Wimbledon Final: Epic 5-Set Thriller</h3>
+                        <p class="news-excerpt">Carlos Alcaraz defeats Novak Djokovic in a stunning 5-set final at Wimbledon. The match lasted over 4 hours with incredible rallies throughout.</p>
+                        <div class="news-meta">
+                            <span class="date">45 mins ago</span>
+                            <span class="category">Grand Slam</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600&h=400&fit=crop" alt="Tennis Player">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Iga Swiatek Extends Winning Streak</h3>
+                        <p class="news-excerpt">World No. 1 Iga Swiatek continues her dominance with 15th consecutive victory, defeating her opponent in straight sets at French Open.</p>
+                        <div class="news-meta">
+                            <span class="date">2 hours ago</span>
+                            <span class="category">WTA</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1595435742656-5272d0b3e2a0?w=600&h=400&fit=crop" alt="Tennis Match">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">ATP Rankings: Major Shake-up</h3>
+                        <p class="news-excerpt">New ATP rankings released with significant changes in top 10. Several players make their career-best ranking debuts this week.</p>
+                        <div class="news-meta">
+                            <span class="date">6 hours ago</span>
+                            <span class="category">ATP</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Tennis Stadium">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">US Open: Schedule Announced</h3>
+                        <p class="news-excerpt">USTA releases complete schedule for US Open 2025. Night sessions to feature top seeds with primetime matches starting at 7 PM EST.</p>
+                        <div class="news-meta">
+                            <span class="date">1 day ago</span>
+                            <span class="category">US Open</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Cric Studio</h2>
+                <p class="about-text">Cric Studio is your one-stop destination for the latest sports news and updates from around the world. We cover cricket, football, and tennis with real-time updates, match highlights, player statistics, and expert analysis.</p>
+                <p class="about-text">Founded with a passion for sports, we bring you comprehensive coverage of the games you love. Whether you're a cricket enthusiast following the IPL, a football fan tracking the Premier League, or a tennis aficionado watching the Grand Slams, Cric Studio has you covered.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📰</div>
+                        <h3>Latest News</h3>
+                        <p>Stay updated with breaking news, live scores, and instant notifications for all major sporting events worldwide</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Match Analysis</h3>
+                        <p>In-depth match analysis, player statistics, and expert commentary to enhance your sports knowledge</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Tournament Coverage</h3>
+                        <p>Complete coverage of major tournaments including World Cups, Grand Slams, and league championships</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Real-Time Updates</h3>
+                        <p>Get instant updates and live match scores delivered right to your device as they happen</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Expert Opinions</h3>
+                        <p>Read insights and predictions from sports analysts and former professional players</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Global Coverage</h3>
+                        <p>Follow sports action from around the world with coverage of international and domestic leagues</p>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Daily Articles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Sports Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Live Updates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100K+</div>
+                        <div class="stat-label">Active Readers</div>
+                    </div>
+                </div>
+
+                <div class="mission-section">
+                    <h3>Our Mission</h3>
+                    <p>To provide sports fans worldwide with accurate, timely, and engaging content that keeps them connected to the games they love. We believe in the power of sports to unite people and create unforgettable moments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms and Conditions Section -->
+    <section id="terms" class="section terms-section">
+        <div class="container">
+            <div class="terms-content">
+                <h2 class="section-title">Terms & Conditions</h2>
+                
+                <div class="terms-intro">
+                    <p>Welcome to Cric Studio ("we", "us", "our", or "Cric Studio"). By accessing or using the website cricstudio.com (the "Website") and the services offered through it (collectively, "Services"), you (the "User" or "you") agree to be bound by the following Terms & Conditions (the "Terms"). If you disagree with any part of these Terms, please do not use the Website or Services.</p>
+                </div>
+
+                <div class="terms-sections">
+                    <div class="terms-item">
+                        <h3>1. Definitions</h3>
+                        <p><strong>User / You / Your:</strong> Any individual or entity accessing or using the Website or Services.</p>
+                        <p><strong>Service(s):</strong> The sports news–related services (news updates, match scores, statistics, commentary, analysis, etc.) offered via the Website.</p>
+                        <p><strong>Content:</strong> All text, images, graphics, logos, software, audio, video, sports data, and other materials provided through the Website.</p>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>2. Eligibility</h3>
+                        <p>You represent and warrant that:</p>
+                        <ul>
+                            <li>You are at least 13 years of age (or the legal age in your jurisdiction).</li>
+                            <li>You have the legal capacity to enter into contracts.</li>
+                            <li>You will comply with all applicable laws in using the Website and Services.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>3. Use of the Website & Services</h3>
+                        <ul>
+                            <li>You agree to use the Website and Services only for lawful purposes and in a way that does not infringe the rights of others.</li>
+                            <li>You shall not misuse the Website (e.g. by inserting malicious code, hacking, spoofing, interfering with other users' access, or reverse engineering).</li>
+                            <li>You may need to register or provide personal information to use certain features; you agree to provide accurate, current, and complete information.</li>
+                            <li>You shall not use automated systems (bots, scrapers) to access or collect data from the Website without our express written permission.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>4. Sports News & Information</h3>
+                        <ul>
+                            <li>Cric Studio provides sports news, updates, scores, statistics, and commentary for informational purposes only.</li>
+                            <li>While we strive for accuracy, we do not guarantee that all information is complete, accurate, or up-to-date.</li>
+                            <li>Sports scores and match data are sourced from third-party providers; we are not liable for any errors, delays, or omissions in such data.</li>
+                            <li>Editorial content, analysis, and opinions expressed on the Website are for general information and entertainment purposes and do not constitute professional advice.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>5. User Accounts & Registration</h3>
+                        <ul>
+                            <li>You may be required to create an account to access certain features of the Website.</li>
+                            <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+                            <li>You agree to notify us immediately of any unauthorized use of your account.</li>
+                            <li>Cric Studio reserves the right to suspend or terminate accounts that violate these Terms.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>6. Intellectual Property</h3>
+                        <ul>
+                            <li>All Content on the Website is the property of Cric Studio or its licensors and is protected by copyright, trademark, or other intellectual property laws.</li>
+                            <li>You may not copy, distribute, republish, transmit, or create derivative works from our Content without our express written consent.</li>
+                            <li>The Cric Studio logo, name, and branding are trademarks of Cric Studio and may not be used without permission.</li>
+                            <li>Sports data, team logos, and player images are property of their respective owners and are used under license or fair use.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>7. Third‑Party Links & Services</h3>
+                        <ul>
+                            <li>The Website may contain links to third‑party websites, social media platforms, or services. We do not control or endorse those, and are not responsible for their content, practices, or policies.</li>
+                            <li>Your interaction with third parties (e.g. advertisers, sponsors, external news sources) is at your own risk.</li>
+                            <li>We may display advertisements from third parties; clicking on such ads may redirect you to external websites.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>8. Privacy & Data Protection</h3>
+                        <ul>
+                            <li>Your use of the Website is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information.</li>
+                            <li>By using the Website, you consent to the collection and use of your data as described in the Privacy Policy.</li>
+                            <li>We use cookies and similar technologies to enhance your experience and analyze website traffic.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>9. Disclaimers & Limitation of Liability</h3>
+                        <ul>
+                            <li>The Website and Services are provided "as is" and "as available" without warranties of any kind, either express or implied.</li>
+                            <li>We do not guarantee uninterrupted, secure, or error‑free operation.</li>
+                            <li>To the maximum extent permitted by law, Cric Studio shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or data, arising from your use of the Website or Services.</li>
+                            <li>Our total aggregate liability arising out of or in connection with these Terms shall not exceed $100 USD or the equivalent in your local currency.</li>
+                            <li>We are not responsible for any betting, gambling, or financial decisions you make based on information from the Website.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>10. Indemnification</h3>
+                        <p>You agree to indemnify, defend, and hold harmless Cric Studio, its officers, directors, employees, affiliates, and agents from and against any claims, liabilities, damages, losses, or expenses (including legal fees) arising out of:</p>
+                        <ul>
+                            <li>Your breach of these Terms.</li>
+                            <li>Your misuse of the Website or Services.</li>
+                            <li>Your violation of any applicable law or third‑party rights.</li>
+                            <li>Any content you submit or post on the Website.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>11. Modifications to Terms & Services</h3>
+                        <ul>
+                            <li>Cric Studio may modify or revise these Terms at any time by posting the updated Terms on the Website.</li>
+                            <li>Continued use of the Website or Services after changes constitutes acceptance of the new Terms.</li>
+                            <li>We may also suspend, discontinue, or change parts of the Website or Services at our discretion.</li>
+                            <li>Material changes to these Terms will be notified via email or prominent notice on the Website.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>12. Termination</h3>
+                        <ul>
+                            <li>We may suspend or terminate your access to the Website or Services at any time, without notice, for conduct that violates these Terms or for any other reason.</li>
+                            <li>Upon termination, your rights to use the Website cease, but obligations accrued prior remain enforceable.</li>
+                            <li>You may stop using the Website at any time, but these Terms will continue to apply to your past use.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>13. Governing Law & Dispute Resolution</h3>
+                        <ul>
+                            <li>These Terms shall be governed by and construed in accordance with the laws of India.</li>
+                            <li>Any dispute arising out of or relating to these Terms or your use of the Website shall be submitted to the courts in Bengaluru, Karnataka, India, unless otherwise agreed.</li>
+                            <li>Before initiating legal proceedings, parties agree to attempt resolution through good faith negotiation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>14. Severability</h3>
+                        <p>If any provision of these Terms is held invalid or unenforceable, the remaining provisions shall still apply.</p>
+                    </div>
+
+                    <div class="terms-item">
+                        <h3>15. Contact Information</h3>
+                        <p>If you have any questions about these Terms & Conditions, please contact us at:</p>
+                        <p><strong>Email:</strong> legal@cricstudio.com<br>
+                        <strong>Website:</strong> cricstudio.com</p>
+                    </div>
+                </div>
+
+                <div class="terms-footer">
+                    <p><strong>Last Updated:</strong> October 29, 2025</p>
+                    <p>By using Cric Studio, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cric Studio</h3>
+                    <p>Your ultimate sports news destination</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#cricket">Cricket</a></li>
+                        <li><a href="#football">Football</a></li>
+                        <li><a href="#tennis">Tennis</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-address">
+                        📍 No 1903 Lodha Supremus, Next to Lodha Eternis, End of 11th Road, Off Mahakali Caves Rd, near Hotel Tunga International, Andheri East, Mumbai, Maharashtra 400069
+                    </p>
+                    <p class="footer-contact">
+                        📞 <a href="tel:8800520632">8800520632</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cric Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

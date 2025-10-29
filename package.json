@@ -1,0 +1,21 @@
+{
+  "name": "cric-studio",
+  "version": "1.0.0",
+  "description": "Cric Studio - Sports News & Updates Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "sports",
+    "cricket",
+    "football",
+    "tennis",
+    "news"
+  ],
+  "author": "Cric Studio",
+  "license": "MIT"
+}
+
+
