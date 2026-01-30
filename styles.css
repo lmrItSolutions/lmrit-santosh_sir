@@ -59,8 +59,29 @@ body {
 }
 
 .logo h1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.8rem;
     font-weight: 700;
+}
+
+.logo .brand-mark {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.logo .brand-mark svg {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.logo .brand-text {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -250,12 +271,18 @@ body {
     font-family: 'Poppins', sans-serif;
     transition: var(--transition);
     background: var(--white);
+    resize: vertical;
 }
 
 .form-input:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea.form-input {
+    min-height: 120px;
+    line-height: 1.6;
 }
 
 .checkbox-group {
@@ -335,6 +362,28 @@ body {
     font-size: 0.85rem;
     color: var(--text-light);
     margin-top: 1rem;
+}
+
+.consent-checkbox {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 15px;
+    margin-top: 1rem;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+.consent-checkbox span {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.consent-checkbox input[type="checkbox"] {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
 }
 
 .section:nth-child(even) {
@@ -638,6 +687,14 @@ body {
     margin-bottom: 1rem;
 }
 
+.terms-item h4 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
 .terms-item p {
     color: var(--text-dark);
     line-height: 1.8;
@@ -772,6 +829,14 @@ body {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0.8;
+}
+
+.redirect-message {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
 }
 
 /* Animations */

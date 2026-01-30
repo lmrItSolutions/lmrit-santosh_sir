@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LMR IT Solutions - Latest sports headlines across cricket, football, and tennis">
+    <title>LMR IT Solutions | Home</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="home">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="/Home/">
+                        <h1>
+                            <span class="brand-mark" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0" stop-color="#667eea"/>
+                                            <stop offset="1" stop-color="#764ba2"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Bat -->
+                                    <g fill="url(#brandGrad)" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 22.5 17.5 11c.8-.8 2-.8 2.8 0l1.1 1.1c.8.8.8 2 0 2.8L10.9 25.4c-.4.4-1 .4-1.4 0L6 22.5z"/>
+                                        <!-- Handle -->
+                                        <path d="M8.1 24.6 6 26.8"/>
+                                    </g>
+                                    <!-- Ball -->
+                                    <circle cx="22.5" cy="9.5" r="3.2" fill="url(#brandGrad)" stroke="#0f172a" stroke-width="1.4"/>
+                                    <path d="M20.7 8.4c1.3.8 2.5 1.1 3.8 1" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span class="brand-text">LMR IT Solutions</span>
+                        </h1>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/Home/" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#cricket-section" class="nav-link" data-page="cricket">Cricket</a></li>
+                    <li><a href="#football-section" class="nav-link" data-page="football">Football</a></li>
+                    <li><a href="#tennis-section" class="nav-link" data-page="tennis">Tennis</a></li>
+                    <li><a href="/About/" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="/Terms/" class="nav-link" data-page="terms">Terms</a></li>
+                    <li><a href="/Privacy/" class="nav-link" data-page="privacy">Privacy</a></li>
+                    <li><a href="/Contact/" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero home-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Welcome to LMR IT Solutions</h2>
+                    <p class="hero-subtitle">Your daily dose of cricket, football, and tennis stories.</p>
+                    <p class="hero-description">Follow match analysis, transfer buzz, and grand slam drama across dedicated pages crafted for every sport.</p>
+                    <div class="hero-buttons">
+                        <a href="#cricket-section" class="btn btn-primary">Explore Cricket</a>
+                        <a href="/Contact/" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-icon">🌐</span>
+                    <h2 class="section-title">Explore LMR IT Solutions</h2>
+                    <p class="section-subtitle">Jump straight into the sport you love the most.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏏</div>
+                        <h3>Cricket Universe</h3>
+                        <p>Series recaps, IPL scoops, and rising talent spotlights from every format.</p>
+                        <a class="btn btn-primary" href="#cricket-section">View Cricket News</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚽</div>
+                        <h3>Football Pulse</h3>
+                        <p>Transfer whispers, tactical deep dives, and world cup build-up in one hub.</p>
+                        <a class="btn btn-primary" href="#football-section">View Football News</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎾</div>
+                        <h3>Tennis Circuit</h3>
+                        <p>Grand Slam thrillers, rankings shake-ups, and player interviews.</p>
+                        <a class="btn btn-primary" href="#tennis-section">View Tennis News</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cricket Section -->
+        <section id="cricket-section" class="section cricket-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-icon">🏏</span>
+                    <h2 class="section-title">Cricket Updates</h2>
+                    <p class="section-subtitle">Latest cricket news, scores, and highlights</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&h=500&fit=crop" alt="Cricket Match">
+                            <span class="badge">Breaking</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">India Wins Thrilling Series Against Australia</h3>
+                            <p class="news-excerpt">In an electrifying finish, India clinched the series 3-2 with an outstanding performance in the final test match at Melbourne Cricket Ground.</p>
+                            <div class="news-meta">
+                                <span class="date">2 hours ago</span>
+                                <span class="category">Test Cricket</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&h=400&fit=crop" alt="Cricket Stadium">
+                            <span class="badge">Live</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">T20 World Cup: England vs Pakistan Today</h3>
+                            <p class="news-excerpt">The much-anticipated clash between England and Pakistan is set to begin at 7:30 PM IST. Both teams looking to secure a spot in the semi-finals.</p>
+                            <div class="news-meta">
+                                <span class="date">30 mins ago</span>
+                                <span class="category">T20</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=600&h=400&fit=crop" alt="Cricket Player">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Virat Kohli Reaches 50th ODI Century</h3>
+                            <p class="news-excerpt">Cricket legend Virat Kohli adds another milestone to his illustrious career with his 50th ODI century against New Zealand.</p>
+                            <div class="news-meta">
+                                <span class="date">5 hours ago</span>
+                                <span class="category">ODI</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1512719994953-eabf50895df7?w=600&h=400&fit=crop" alt="Cricket Stadium Night">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">IPL 2025: New Teams Announced</h3>
+                            <p class="news-excerpt">IPL announces expansion with two new teams joining the league. Auctions scheduled for next month with massive player pool expected.</p>
+                            <div class="news-meta">
+                                <span class="date">1 day ago</span>
+                                <span class="category">IPL</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Football Section -->
+        <section id="football-section" class="section football-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-icon">⚽</span>
+                    <h2 class="section-title">Football Updates</h2>
+                    <p class="section-subtitle">Latest football news, scores, and transfers</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=500&fit=crop" alt="Football Stadium">
+                            <span class="badge">Breaking</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Manchester City Wins Premier League Title</h3>
+                            <p class="news-excerpt">Manchester City secures their fourth consecutive Premier League title with a dominant 3-0 victory over Arsenal in the final match of the season.</p>
+                            <div class="news-meta">
+                                <span class="date">1 hour ago</span>
+                                <span class="category">Premier League</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop" alt="Football Player">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Real Madrid Signs Young Sensation</h3>
+                            <p class="news-excerpt">Real Madrid completes the signing of Brazil's rising star for a record-breaking fee. The 21-year-old midfielder signs a 6-year contract.</p>
+                            <div class="news-meta">
+                                <span class="date">3 hours ago</span>
+                                <span class="category">Transfer News</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop" alt="Football Match">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Champions League Final Preview</h3>
+                            <p class="news-excerpt">Bayern Munich vs Barcelona: A tactical breakdown of what promises to be an epic Champions League final showdown this Saturday.</p>
+                            <div class="news-meta">
+                                <span class="date">4 hours ago</span>
+                                <span class="category">Champions League</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1589487391730-58f20eb2c308?w=600&h=400&fit=crop" alt="Football Stadium Aerial">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">World Cup 2026: Stadium Updates</h3>
+                            <p class="news-excerpt">FIFA releases new images of World Cup 2026 stadiums across USA, Canada, and Mexico. Construction on track for timely completion.</p>
+                            <div class="news-meta">
+                                <span class="date">1 day ago</span>
+                                <span class="category">World Cup</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tennis Section -->
+        <section id="tennis-section" class="section tennis-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-icon">🎾</span>
+                    <h2 class="section-title">Tennis Updates</h2>
+                    <p class="section-subtitle">Latest tennis news, matches, and rankings</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&h=500&fit=crop" alt="Tennis Court">
+                            <span class="badge">Live</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Wimbledon Final: Epic 5-Set Thriller</h3>
+                            <p class="news-excerpt">Carlos Alcaraz defeats Novak Djokovic in a stunning 5-set final at Wimbledon. The match lasted over 4 hours with incredible rallies throughout.</p>
+                            <div class="news-meta">
+                                <span class="date">45 mins ago</span>
+                                <span class="category">Grand Slam</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600&h=400&fit=crop" alt="Tennis Player">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Iga Swiatek Extends Winning Streak</h3>
+                            <p class="news-excerpt">World No. 1 Iga Swiatek continues her dominance with 15th consecutive victory, defeating her opponent in straight sets at French Open.</p>
+                            <div class="news-meta">
+                                <span class="date">2 hours ago</span>
+                                <span class="category">WTA</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1595435742656-5272d0b3e2a0?w=600&h=400&fit=crop" alt="Tennis Match">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">ATP Rankings: Major Shake-up</h3>
+                            <p class="news-excerpt">New ATP rankings released with significant changes in top 10. Several players make their career-best ranking debuts this week.</p>
+                            <div class="news-meta">
+                                <span class="date">6 hours ago</span>
+                                <span class="category">ATP</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Tennis Stadium">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">US Open: Schedule Announced</h3>
+                            <p class="news-excerpt">USTA releases complete schedule for US Open 2025. Night sessions to feature top seeds with primetime matches starting at 7 PM EST.</p>
+                            <div class="news-meta">
+                                <span class="date">1 day ago</span>
+                                <span class="category">US Open</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">Why Fans Choose Us</h2>
+                    <p class="about-text">LMR IT Solutions curates premium coverage for fans who expect more than scorelines. Dive into trusted reporting, rapid match summaries, and insight from analysts across continents.</p>
+                    <div class="stats-section">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Articles Daily</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Core Sports</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Live Coverage</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100K+</div>
+                            <div class="stat-label">Readers</div>
+                        </div>
+                    </div>
+                    <div class="mission-section">
+                        <h3>Stay Updated Everywhere</h3>
+                        <p>Bookmark the dedicated pages for deep dives, and swing by the Contact page whenever you want personalized updates.</p>
+                        <a class="btn btn-secondary" href="/Contact/">Go to Contact Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LMR IT Solutions</h3>
+                    <p>Your ultimate sports news destination</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#cricket-section">Cricket</a></li>
+                        <li><a href="#football-section">Football</a></li>
+                        <li><a href="#tennis-section">Tennis</a></li>
+                        <li><a href="/About/">About Us</a></li>
+                        <li><a href="/Terms/">Terms & Conditions</a></li>
+                        <li><a href="/Privacy/">Privacy Policy</a></li>
+                        <li><a href="/Contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-address">
+                        📍 No 1907 Lodha Supremus, Next to Lodha Eternis, End of 11th Road, Off Mahakali Caves Rd, near Hotel Tunga International, Andheri East, Mumbai, Maharashtra 400069
+                    </p>
+                    <p class="footer-contact">
+                        Contact Number 📞 <a href="tel:9702640000">9702640000</a>
+                    </p>
+                    <p class="footer-contact">
+                        Email 📧 <a href="mailto:sanzworld@gmail.com">sanzworld@gmail.com</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LMR IT Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+</html>
+
+

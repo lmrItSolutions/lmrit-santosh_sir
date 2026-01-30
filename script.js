@@ -1,50 +1,45 @@
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.querySelector('.nav-links');
-
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
 const navLinkItems = document.querySelectorAll('.nav-link');
-navLinkItems.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenuBtn.classList.remove('active');
-        navLinks.classList.remove('active');
-    });
-});
 
-// Active Navigation Link on Scroll
-const sections = document.querySelectorAll('section');
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    // Add shadow to navbar on scroll
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-
-    // Update active link
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 100)) {
-            current = section.getAttribute('id');
-        }
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
 
     navLinkItems.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
+// Active Navigation Link based on page
+const currentPage = document.body?.dataset?.page;
+if (currentPage && navLinkItems.length) {
+    navLinkItems.forEach(link => {
+        if (link.dataset.page === currentPage) {
             link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
-});
+}
+
+// Navbar shadow on scroll (if navbar exists)
+const navbar = document.querySelector('.navbar');
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -197,7 +192,7 @@ if (signupForm) {
 }
 
 // Console welcome message
-console.log('%c🏏 Welcome to Cric Studio!', 'color: #667eea; font-size: 20px; font-weight: bold;');
+console.log('%cWelcome to LMR IT Solutions!', 'color: #667eea; font-size: 20px; font-weight: bold;');
 console.log('%cYour ultimate sports news destination', 'color: #764ba2; font-size: 14px;');
 
 // Add loading state

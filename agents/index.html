@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LMR IT Solutions — Agent Link</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--primary: #667eea;
+			--secondary: #764ba2;
+			--text: #2d3748;
+			--muted: #718096;
+			--bg: #f7fafc;
+			--white: #ffffff;
+		}
+		* { box-sizing: border-box; }
+		html, body {
+			height: 100%;
+			margin: 0;
+			font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+			background: var(--bg);
+			color: var(--text);
+		}
+		.wrapper {
+			min-height: 100%;
+			display: grid;
+			place-items: center;
+			padding: 24px;
+			background: linear-gradient(135deg, var(--primary), var(--secondary));
+		}
+		.card {
+			width: 100%;
+			max-width: 720px;
+			background: var(--white);
+			border-radius: 16px;
+			box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+			overflow: hidden;
+		}
+		.header {
+			padding: 28px 28px 16px;
+			background: linear-gradient(135deg, rgba(102,126,234,0.12), rgba(118,75,162,0.12));
+		}
+		.title {
+			margin: 0 0 6px;
+			font-size: 22px;
+			font-weight: 700;
+			background: linear-gradient(135deg, var(--primary), var(--secondary));
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.subtitle {
+			margin: 0;
+			color: var(--muted);
+			font-size: 14px;
+		}
+		.content {
+			padding: 28px;
+		}
+		.agent-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 16px;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+		}
+		.kv {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			color: var(--muted);
+			font-size: 14px;
+		}
+		.kv strong {
+			color: var(--text);
+		}
+		.actions {
+			display: flex;
+			gap: 12px;
+			flex-wrap: wrap;
+		}
+		.btn {
+			appearance: none;
+			border: 0;
+			border-radius: 10px;
+			padding: 12px 18px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+		}
+		.btn-primary {
+			background: linear-gradient(135deg, var(--primary), var(--secondary));
+			color: var(--white);
+			box-shadow: 0 10px 24px rgba(102,126,234,.25);
+		}
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 14px 34px rgba(102,126,234,.35);
+		}
+		.btn-secondary {
+			background: #edf2f7;
+			color: var(--text);
+		}
+		.btn-secondary:hover {
+			background: #e2e8f0;
+		}
+		.note {
+			margin-top: 14px;
+			color: var(--muted);
+			font-size: 13px;
+		}
+		.error {
+			padding: 16px;
+			background: #fff5f5;
+			border-left: 4px solid #e53e3e;
+			border-radius: 8px;
+			color: #742a2a;
+			font-size: 14px;
+			margin-top: 8px;
+		}
+		@media (max-width: 480px) {
+			.actions { width: 100%; }
+			.btn { width: 100%; justify-content: center; }
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="card">
+			<div class="header">
+				<h1 class="title">LMR IT Solutions — Agent Redirect</h1>
+				<p class="subtitle">Quick access link for your assigned code</p>
+			</div>
+			<div class="content">
+				<div class="agent-row">
+					<div class="kv">
+						<span>Agent ID:</span>
+						<strong id="agentId">—</strong>
+					</div>
+					<div class="kv">
+						<span>Assigned Code:</span>
+						<strong id="agentCode">—</strong>
+					</div>
+				</div>
+				<div class="actions">
+					<a id="goBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Open Agent Link</a>
+					<a class="btn btn-secondary" href="/" rel="noopener">Back to Home</a>
+				</div>
+				<p class="note">If the button doesn’t open, ensure your agent ID is correct in the URL (e.g. <strong>/1/</strong>, <strong>/2/</strong>).</p>
+				<div id="errorBox" class="error" style="display:none;">Invalid or unassigned agent ID. Please check the link or contact support.</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Map agentId -> code
+		// Add/modify entries here as you onboard agents.
+		const AGENT_CODE_MAP = {
+			"1": "AB2121",
+			"2": "HR11"
+			// "3": "XYZ123",
+			// "4": "LM45",
+		};
+
+		// Parse agent id from path: /{id}/ or /{id}
+		function getAgentIdFromPath() {
+			const path = window.location.pathname.replace(/\/+/g, "/");
+			// Expecting "/1/" or "/2/" etc.
+			const match = path.match(/^\/(\w+)\/?$/);
+			return match ? match[1] : null;
+		}
+
+		(function init() {
+			const agentIdEl = document.getElementById("agentId");
+			const agentCodeEl = document.getElementById("agentCode");
+			const goBtn = document.getElementById("goBtn");
+			const errorBox = document.getElementById("errorBox");
+
+			const agentId = getAgentIdFromPath();
+			agentIdEl.textContent = agentId ?? "—";
+
+			const code = agentId ? AGENT_CODE_MAP[agentId] : null;
+			if (!code) {
+				errorBox.style.display = "block";
+				agentCodeEl.textContent = "—";
+				goBtn.setAttribute("aria-disabled", "true");
+				goBtn.style.pointerEvents = "none";
+				goBtn.style.opacity = "0.6";
+				return;
+			}
+
+			agentCodeEl.textContent = code;
+			const target = `https://D4.The100.co.in/?code=${encodeURIComponent(code)}`;
+			goBtn.href = target;
+		})();
+	</script>
+</body>
+</html>
+
+
