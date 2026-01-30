@@ -4,9 +4,10 @@
   "description": "Cric Studio - Sports News & Updates Website",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve .",
-    "dev": "npx serve ."
-  },
+  "dev": "npx serve .",
+  "build": "echo \"no build step\"",
+  "start": "npx serve ."
+},
   "keywords": [
     "sports",
     "cricket",
