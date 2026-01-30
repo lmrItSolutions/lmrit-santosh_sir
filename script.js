@@ -192,7 +192,7 @@ if (signupForm) {
 }
 
 // Console welcome message
-console.log('%cWelcome to LMR IT Solutions!', 'color: #667eea; font-size: 20px; font-weight: bold;');
+console.log('%cWelcome to LMR Solutions!', 'color: #667eea; font-size: 20px; font-weight: bold;');
 console.log('%cYour ultimate sports news destination', 'color: #764ba2; font-size: 14px;');
 
 // Add loading state
